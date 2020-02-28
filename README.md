@@ -7,4 +7,4 @@ Simulate the triggers sent by the MRI (key pressed) for python 3.
   * repetition    =   the number of times the key will be sent
   * period        =   the period in between the key pressed     [sec]
   * waintingTime  =   the pre-waiting time before starting sending key pressed
-2. Launch the main ```python main.py``` from a terminal 
+2. Launch the main from a terminal ```python main.py``` 

@@ -15,7 +15,7 @@ def main(key_Type, repetition, period, waitingTime):
 		t = i * 5
 		print("In waiting mode for: {} sec / {} sec".format(t, waitingTime))
 		sleep(waiting[0])
-	sleep(waiting[1])
+	sleep(waiting[1]/1000)
 
 	print("Starting the MRI simulation")
 
@@ -23,7 +23,7 @@ def main(key_Type, repetition, period, waitingTime):
 	for i in range(repetition):	
 		keyboard.press(key_Type)
 		keyboard.release(key_Type)
-		sleep(period)
+		sleep(period/1000)
 		
 
 if __name__ == '__main__':

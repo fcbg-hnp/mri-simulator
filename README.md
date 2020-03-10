@@ -1,11 +1,10 @@
 # MRI-Simulator
 Simulate the triggers sent by the MRI (key pressed) for python 3.
 
-###Installation
+## Installation
 It requires the pynput lib, which can be installed with ```pip3 install pynput```
 
-
-### Usage
+## Usage
 1. Modify the ```config.ini``` with you desired parameters:
   * key_type      =   the key value to send
   * repetition    =   the number of times the key will be sent

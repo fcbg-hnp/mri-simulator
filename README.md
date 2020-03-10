@@ -1,7 +1,7 @@
 # MRI-Simulator
 Simulate the triggers sent by the MRI (key pressed) for python 3.
 
-##Installation
+###Installation
 It requires the pynput lib, which can be installed with ```pip3 install pynput```
 
 

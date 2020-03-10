@@ -2,7 +2,7 @@
 Simulate the triggers sent by the MRI (key pressed) for python 3.
 
 ## Installation
-It requires the pynput lib, which can be installed with ```pip install pynput```
+Run ```pip install -e .``` to install the library in development mode.
 
 ## Usage
 1. Modify the ```config.ini``` with you desired parameters:

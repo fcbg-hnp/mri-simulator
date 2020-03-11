@@ -10,4 +10,6 @@ Run ```pip install -e .``` to install the library in development mode.
   * repetition    =   the number of times the key will be sent
   * period        =   the period in between two keys pressed                     [msec]
   * waitingTime  =   the pre-waiting time before starting sending keys pressed  [msecs]
-2. Launch the main from a terminal ```python main.py``` 
+2. Launch the main from a terminal 
+  * ```python main.py``` will select the config.ini from the folder
+  * ```python main.py [path2file]``` to use a specific config.ini

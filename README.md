@@ -13,4 +13,4 @@ Run ```pip install -e .``` to install the library in development mode.
 2. Launch the main from a terminal 
   * ```python main.py``` will select the config.ini from the folder
   * ```python main.py [path2file]``` to use a specific config.ini
-  * ```import mrisim``` to use it as in your code
+  * ```import mrisim``` to use it inside your code

@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='MRI Simulator',
+    name='mrisim',
     version='1.0',
     author='Arnaud Desvachez',
     author_email='arnaud.desvachez@gmail.com',

@@ -3,13 +3,14 @@ from __future__ import print_function, division
 import sys
 from os import path
 from time import sleep
-from pynput.keyboard import Key, Controller
+#from pynput.keyboard import Key, Controller
+from keyboard import press_and_release
 import configparser
 
 
 def main(key_Type, repetition, period, waitingTime):
 
-	keyboard = Controller()
+	#keyboard = Controller()
 
 	# Waiting period before starting
 	waiting = divmod(waitingTime, 5)
@@ -25,8 +26,7 @@ def main(key_Type, repetition, period, waitingTime):
 
 	# Loop
 	for i in range(repetition):	
-		keyboard.press(key_Type)
-		keyboard.release(key_Type)
+		press_and_release(key_Type)
 		sleep(period)
 		
 

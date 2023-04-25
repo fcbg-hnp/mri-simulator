@@ -1,16 +1,24 @@
 # MRI-Simulator
-Simulate the triggers sent by the MRI (key pressed) for python 3.
+
+Simulate the triggers sent by the MRI (key pressed) in python 3.
 
 ## Installation
-Run ```pip install -e .``` to install the library in development mode.
+
+This repository can be installed with `pip install git+https://github.com/fcbg-hnp-meeg/mri-simulator`.
 
 ## Usage
-1. Modify the ```config.ini``` with you desired parameters:
-  * key_type      =   the key value to send
-  * repetition    =   the number of times the key will be sent
-  * period        =   the period in between two keys pressed                     [msec]
-  * waitingTime  =   the pre-waiting time before starting sending keys pressed  [msecs]
-2. Launch the main from a terminal 
-  * ```python main.py``` will select the config.ini from the folder
-  * ```python main.py [path2file]``` to use a specific config.ini
-  * ```import mrisim``` to use it inside your code
+
+```
+from mrisim.config import read_config
+from mrisim import simulate
+
+# use read_config to load a custom .ini configuration
+fname = "my_config.ini"
+key, repetition, period, wait = read_config(fname)
+
+# use simulate to run the key-press simulation
+simulate(key, repetition, period, wait)
+```
+
+An entry-point `mrisim` is available. Use `mrisim --help` in a terminal for
+information about the arguments.

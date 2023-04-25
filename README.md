@@ -3,7 +3,6 @@
 [![codecov](https://codecov.io/gh/fcbg-hnp-meeg/mri-simulator/branch/master/graph/badge.svg?token=F5FKJ70M9D)](https://codecov.io/gh/fcbg-hnp-meeg/mri-simulator)
 [![tests](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/pytest.yml)
 [![build](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/build.yml)
-[![doc](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/doc.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/doc.yml)
 
 # MRI-Simulator
 

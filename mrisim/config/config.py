@@ -70,8 +70,6 @@ def read_config(
             "The period should be a positive number. " f"{period} is invalid."
         )
     if wait < 0:
-        raise ValueError(
-            "The wait should be a positive number. " f"{wait} is invalid."
-        )
+        raise ValueError("The wait should be a positive number. " f"{wait} is invalid.")
 
     return key, repetition, period, wait

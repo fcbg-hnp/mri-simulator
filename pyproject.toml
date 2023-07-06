@@ -36,6 +36,7 @@ dependencies = [
     'numpy>=1.21',
     'packaging',
     'psutil',
+    'psychopy',
 ]
 
 [project.optional-dependencies]
@@ -81,6 +82,9 @@ include-package-data = false
 [tool.setuptools.packages.find]
 include = ['mrisim*']
 exclude = ['mrisim*tests']
+
+[tool.setuptools.package-data]
+'mrisim.config' = ['*.ini']
 
 [tool.black]
 line-length = 88

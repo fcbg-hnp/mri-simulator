@@ -1,7 +1,4 @@
-# postponed evaluation of annotations, c.f. PEP 563 and PEP 649
-# alternatively, the type hints can be defined as strings which will be
-# evaluated with eval() prior to type checking.
-from __future__ import annotations
+from __future__ import annotations  # c.f. PEP 563, PEP 649
 
 from configparser import ConfigParser
 from typing import TYPE_CHECKING
@@ -67,9 +64,9 @@ def read_config(
         )
     if period < 0:
         raise ValueError(
-            "The period should be a positive number. " f"{period} is invalid."
+            f"The period should be a positive number. {period} is invalid."
         )
     if wait < 0:
-        raise ValueError("The wait should be a positive number. " f"{wait} is invalid.")
+        raise ValueError(f"The wait should be a positive number. {wait} is invalid.")
 
     return key, repetition, period, wait

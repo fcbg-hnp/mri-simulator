@@ -1,4 +1,4 @@
-"""Test _logs.py"""
+"""Test logs.py"""
 
 import logging
 from typing import Optional, Union
@@ -124,7 +124,7 @@ def test_verbose(caplog):
 def test_file_handler(tmp_path):
     """Test adding a file handler."""
     fname = tmp_path / "logs.txt"
-    add_file_handler(fname, verbose="WARNING")
+    add_file_handler(fname)  # default level: WARNING.
 
     logger.warning("test1")
     logger.info("test2")

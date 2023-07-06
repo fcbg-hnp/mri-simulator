@@ -79,10 +79,13 @@ def test_verbose(caplog):
     foo()
     assert "101" not in caplog.text
 
-    for level in (20, 25, 30, True, False, "WARNING", "ERROR"):
+    for level in (20, 25, 30, False, "WARNING", "ERROR"):
         caplog.clear()
         foo(verbose=level)
         assert "101" not in caplog.text
+    caplog.clear()
+    foo(verbose=True)
+    assert "101" in caplog.text
 
     caplog.clear()
     foo(verbose="DEBUG")
@@ -124,11 +127,11 @@ def test_verbose(caplog):
 def test_file_handler(tmp_path):
     """Test adding a file handler."""
     fname = tmp_path / "logs.txt"
-    add_file_handler(fname)  # default level: WARNING.
+    add_file_handler(fname, verbose="WARNING")  # default level: INFO.
 
     logger.warning("test1")
     logger.info("test2")
-    logger.handlers[-1].setLevel(logging.INFO)
+    logger.handlers[-1].setLevel(logging.DEBUG)
     logger.info("test3")
 
     logger.handlers[-1].close()

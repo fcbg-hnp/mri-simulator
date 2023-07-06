@@ -71,9 +71,9 @@ def test_check_verbose():
     assert check_verbose(12) == 12
     assert check_verbose("INFO") == logging.INFO
     assert check_verbose("DEBUG") == logging.DEBUG
-    assert check_verbose(True) == logging.INFO
-    assert check_verbose(False) == logging.WARNING
-    assert check_verbose(None) == logging.WARNING
+    assert check_verbose(True) == logging.DEBUG
+    assert check_verbose(False) == logging.INFO
+    assert check_verbose(None) == logging.INFO
 
     # invalids
     with pytest.raises(TypeError, match="must be an instance of"):

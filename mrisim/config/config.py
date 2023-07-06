@@ -21,15 +21,15 @@ def read_config(
     ----------
     fname : path-like
         Path to the ``.ini`` configuration containing a single ``'params'``
-        section with 4 keys: ``'key'``, ``'period'``, ``'repetition'``,
-        ``'wait'``.
+        section with 4 keys: ``'key'``, ``'repetition'``, ``'period'``,
+        ``'wait_start'``.
 
     Returns
     -------
     %(key)s
     %(repetition)s
     %(period)s
-    %(wait)s
+    %(wait_start)s
     """
     fname = ensure_path(fname, must_exist=True)
     config = ConfigParser(inline_comment_prefixes=("#", ";"))
@@ -44,18 +44,18 @@ def read_config(
         "key",
         "period",
         "repetition",
-        "wait",
+        "wait_start",
     ]:
         raise ValueError(
             "The configuration file section 'params' should have 4 keys: "
-            "'key', 'period', 'repetition', 'wait'."
+            "'key', 'period', 'repetition', 'wait_start'."
         )
 
     # extract variables
     key = config["params"]["key"]
     repetition = int(config["params"]["repetition"])
     period = int(config["params"]["period"]) / 1000
-    wait = int(config["params"]["wait"]) / 1000
+    wait_start = int(config["params"]["wait_start"]) / 1000
 
     if repetition <= 0:
         raise ValueError(
@@ -66,7 +66,9 @@ def read_config(
         raise ValueError(
             f"The period should be a positive number. {period} is invalid."
         )
-    if wait < 0:
-        raise ValueError(f"The wait should be a positive number. {wait} is invalid.")
+    if wait_start < 0:
+        raise ValueError(
+            f"The wait should be a positive number. {wait_start} is invalid."
+        )
 
-    return key, repetition, period, wait
+    return key, repetition, period, wait_start

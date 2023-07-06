@@ -16,12 +16,12 @@ invalid5 = directory / "config_invalid_5.ini"
 
 def test_read_config():
     """Test loading of a valid and invalid configuration."""
-    key, repetition, period, wait = read_config(valid)
+    key, repetition, period, wait_start = read_config(valid)
     assert isinstance(key, str)
     assert isinstance(repetition, int)
     assert 0 < repetition
     assert isinstance(period, float)
-    assert isinstance(wait, float)
+    assert isinstance(wait_start, float)
 
     with pytest.raises(FileNotFoundError, match="does not exist"):
         read_config("101.ini")
@@ -39,8 +39,8 @@ def test_read_config():
 
 def test_read_default_config():
     """Test loading of the default configuration."""
-    key, repetition, period, wait = read_config(default)
+    key, repetition, period, wait_start = read_config(default)
     assert key == "5"
     assert repetition == 5
     assert period == 1.0
-    assert wait == 15
+    assert wait_start == 15

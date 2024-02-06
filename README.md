@@ -2,7 +2,6 @@
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![codecov](https://codecov.io/gh/fcbg-hnp-meeg/mri-simulator/branch/master/graph/badge.svg?token=F5FKJ70M9D)](https://codecov.io/gh/fcbg-hnp-meeg/mri-simulator)
 [![tests](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/pytest.yml)
-[![build](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/fcbg-hnp-meeg/mri-simulator/actions/workflows/build.yml)
 
 # MRI-Simulator
 

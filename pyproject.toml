@@ -8,7 +8,7 @@ version = '0.1.0'
 description = 'Simulate the triggers sent by the MRI (key pressed).'
 readme = 'README.md'
 license = {file = 'LICENSE'}
-requires-python = '>=3.9'
+requires-python = '>=3.10'
 authors = [
     {name = 'Arnaud Desvachez', email = 'arnaud.desvachez@gmail.com'},
 ]
@@ -25,15 +25,15 @@ classifiers = [
     'Operating System :: Unix',
     'Operating System :: MacOS',
     'Programming Language :: Python :: 3 :: Only',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
     'Natural Language :: English',
     'License :: OSI Approved :: MIT License',
 ]
 dependencies = [
     'keyboard',
-    'numpy>=1.21',
+    'numpy>=1.23',
     'packaging',
     'psutil',
     'psychopy',
@@ -88,7 +88,7 @@ exclude = ['mrisim*tests']
 
 [tool.black]
 line-length = 88
-target-version = ['py39']
+target-version = ['py310']
 include = '\.pyi?$'
 extend-exclude = '''
 (
@@ -103,7 +103,7 @@ extend-exclude = '''
 profile = 'black'
 multi_line_output = 3
 line_length = 88
-py_version = 39
+py_version = 310
 extend_skip_glob = [
     'setup.py',
 ]
@@ -118,7 +118,6 @@ add_ignore = 'D100,D104,D107'
 [tool.ruff]
 line-length = 88
 extend-exclude = [
-    "doc",
     "setup.py",
 ]
 

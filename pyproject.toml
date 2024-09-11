@@ -67,10 +67,10 @@ full = [
 ]
 
 [project.urls]
-homepage = 'https://github.com/fcbg-hnp-meeg/mri-simulator/'
-documentation = 'https://github.com/fcbg-hnp-meeg/mri-simulator'
-source = 'https://github.com/fcbg-hnp-meeg/mri-simulator'
-tracker = 'https://github.com/fcbg-hnp-meeg/mri-simulator/issues'
+homepage = 'https://github.com/fcbg-platforms/mri-simulator/'
+documentation = 'https://github.com/fcbg-platforms/mri-simulator'
+source = 'https://github.com/fcbg-platforms/mri-simulator'
+tracker = 'https://github.com/fcbg-platforms/mri-simulator/issues'
 
 [project.scripts]
 mrisim = 'mrisim.commands.mrisim:run'

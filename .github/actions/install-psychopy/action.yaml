@@ -9,6 +9,7 @@ runs:
       with:
         qt: true
     - name: Install dependencies
+      shell: bash
       run: |
         python -m pip install --progress-bar off --upgrade pip setuptools
         python -m pip install --progress-bar off .[test]
